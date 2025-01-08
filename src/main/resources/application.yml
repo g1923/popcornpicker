@@ -1,0 +1,26 @@
+spring:
+  application:
+  name : popcornpicker
+
+  # 서버
+  server:
+    port: 8080
+
+  # mysql
+  datasource:
+    url: jdbc:mysql://localhost:3306/popcorn?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: popcorn
+    password: popcorn
+
+  jpa:
+    hibernate:
+      ddl-auto: none # validate: 스키마 확인, update : Entity 자동 업데이트
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  security:
+    user:
+      name: popcorn
+      password: popcorn
